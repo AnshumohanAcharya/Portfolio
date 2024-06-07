@@ -35,51 +35,10 @@ const projects = [
     nums: "01",
     category: "Full Stack",
     title: "Project 1",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nunc nec nisl lacinia tincidunt. In hac habitasse platea dictumst. Proin nec ligula nec nunc nec nisl lacinia tincidunt.",
-    stack: [
-      {
-        id: 1,
-        name: "React.js",
-        icon: <FaReact />,
-      },
-      {
-        id: 2,
-        name: "MongoDB",
-        icon: <SiMongodb />,
-      },
-      {
-        id: 3,
-        name: "Express.js",
-        icon: <SiExpress />,
-      },
-      {
-        id: 4,
-        name: "Node.js",
-        icon: <FaNodeJs />,
-      },
-      {
-        id: 5,
-        name: "Tailwind CSS",
-        icon: <SiTailwindcss />,
-      },
-      {
-        id: 6,
-        name: "Material UI",
-        icon: <SiMui />,
-      }
+    description: [
+      "Experience seamless food ordering with our state-of-the-art app, featuring real-time order tracking, secure authentication, and a reliable payment gateway.",
+      "Enjoy a personalized user experience with advanced sorting options and a sleek, responsive design. With quick registration, flexible payment options, and lightning-fast performance, your next meal is just a few taps away.",
     ],
-    image: "/assets/work/thumb1.png",
-    live: "",
-    github: "",
-  },
-  {
-    id: 2,
-    nums: "02",
-    category: "Full Stack",
-    title: "Project 2",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nunc nec nisl lacinia tincidunt. In hac habitasse platea dictumst. Proin nec ligula nec nunc nec nisl lacinia tincidunt.",
     stack: [
       {
         id: 1,
@@ -117,10 +76,53 @@ const projects = [
         icon: <SiAuth0 />,
       },
     ],
-    image: "/assets/work/thumb2.png",
-    live: "",
-    github: "",
+    image: "/assets/work/Project1.png",
+    live: "https://fasteats-frontend.onrender.com",
+    github: "https://github.com/AnshumohanAcharya/FastEats",
   },
+  // {
+  //   id: 2,
+  //   nums: "02",
+  //   category: "Full Stack",
+  //   title: "Project 2",
+  //   description:
+  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nunc nec nisl lacinia tincidunt. In hac habitasse platea dictumst. Proin nec ligula nec nunc nec nisl lacinia tincidunt.",
+  //   stack: [
+  //     {
+  //       id: 1,
+  //       name: "React.js",
+  //       icon: <FaReact />,
+  //     },
+  //     {
+  //       id: 2,
+  //       name: "MongoDB",
+  //       icon: <SiMongodb />,
+  //     },
+  //     {
+  //       id: 3,
+  //       name: "Express.js",
+  //       icon: <SiExpress />,
+  //     },
+  //     {
+  //       id: 4,
+  //       name: "Node.js",
+  //       icon: <FaNodeJs />,
+  //     },
+  //     {
+  //       id: 5,
+  //       name: "Tailwind CSS",
+  //       icon: <SiTailwindcss />,
+  //     },
+  //     {
+  //       id: 6,
+  //       name: "Material UI",
+  //       icon: <SiMui />,
+  //     },
+  //   ],
+  //   image: "/assets/work/thumb2.png",
+  //   live: "",
+  //   github: "",
+  // },
 ];
 
 const Work = () => {
@@ -149,7 +151,15 @@ const Work = () => {
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-a;; duration-500 capitalize">
                 {project.category} Project
               </h2>
-              <p className="text-white/60">{project.description}</p>
+              <div className="text-white/60 gap-y-2">
+                <ul className="list-disc">
+                  {project.description.map((item) => (
+                    <li key={item} className="text-white/60">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
               <ul className="flex flex-wrap gap-4 mt-4">
                 {project.stack.map((item) => (
                   <li
