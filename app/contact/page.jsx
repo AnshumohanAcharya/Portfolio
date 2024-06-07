@@ -68,10 +68,10 @@ const Contact = () => {
             >
               <h3 className="text-4xl text-accent">Let's work together</h3>
               <p className="text-white/60">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est
-                cumque quidem cupiditate minima ea. Vel illum, dolorum sed autem
-                nesciunt itaque obcaecati quia nam sint esse voluptatum
-                distinctio sapiente blanditiis.
+                Got a question, a brilliant idea, or just want to chat about
+                amazing food? I'm all ears! Your thoughts make my day and help
+                me improve. Drop me a message - let's connect and create
+                something awesome together! 🍔✨
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Input
