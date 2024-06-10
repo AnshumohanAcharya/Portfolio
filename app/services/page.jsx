@@ -8,33 +8,45 @@ const services = [
     id: 1,
     num: "01",
     title: "Web Development",
-    description:
-      "I build websites that serve as powerful marketing tools and bring memorable brand experiences.",
-    href: "",
+    description: [
+      "Skilled in frontend (HTML/CSS/JavaScript) and backend (Node.js/Express.js/MongoDB) technologies.",
+      "Proficient in frameworks like React.js , Next.js",
+      "Experienced in cloud deployment (AWS/Azure/GCP) and database management."
+    ],
+    href: "/projects",
   },
   {
     id: 2,
     num: "02",
     title: "DevOps",
-    description:
-      "I build websites that serve as powerful marketing tools and bring memorable brand experiences.",
-    href: "",
+    description: [
+      "Expertise in automation (Docker/Kubernetes/Terraform) for infrastructure and deployment.",
+      "Proficient in CI/CD setup (Jenkins/GitLab CI) and monitoring (Prometheus/Grafana).",
+      "Skilled in cloud services management and security practices.",
+    ],
+    href: "/projects",
   },
   {
     id: 3,
     num: "03",
     title: "Machine Learning",
-    description:
-      "I build websites that serve as powerful marketing tools and bring memorable brand experiences.",
-    href: "",
+    description: [
+      "Strong in ML fundamentals, data preprocessing, and model evaluation.",
+      "Experienced in scikit-learn, TensorFlow, and PyTorch for model development.",
+      "Capable of building recommendation systems, predictive models, and NLP applications.",
+    ],
+    href: "/projects",
   },
   {
     id: 4,
     num: "04",
     title: "Deep Learning",
-    description:
-      "I build websites that serve as powerful marketing tools and bring memorable brand experiences.",
-    href: "",
+    description: [
+      "Advanced knowledge in neural network architectures.",
+      "Proficient in deep learning frameworks like TensorFlow and PyTorch.",
+      "Experienced in computer vision and NLP tasks.",
+    ],
+    href: "/projects",
   },
 ];
 
@@ -73,7 +85,13 @@ const Services = () => {
                   {service.title}
                 </h2>
                 <p className="text-white/60 dark:text-gray-300 mt-2">
-                  {service.description}
+                  {service.description.map((desc) => {
+                    return (
+                      <span key={desc.id} className="block">
+                        {desc}
+                      </span>
+                    );
+                  })}
                 </p>
                 {/* <div className="border-b border-white/20 w-full">
                   <Image
