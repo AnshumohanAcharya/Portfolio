@@ -19,19 +19,19 @@ const info = [
     id: 1,
     icon: <FaPhoneAlt />,
     title: "Phone",
-    description: "(+40) 321 654 9876",
+    description: "(+91) 863-972-9337",
   },
   {
     id: 2,
     icon: <FaEnvelope />,
     title: "Email",
-    description: "youremail@gmail.com",
+    description: "anshumohanacharya19@gmail.com",
   },
   {
     id: 3,
     icon: <FaMapMarkerAlt />,
     title: "Address",
-    description: "Code Corner, tech Town 123456",
+    description: "Tribeni , Hooghly, West Bengal, India - 712504",
   },
 ];
 
