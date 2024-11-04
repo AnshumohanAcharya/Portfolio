@@ -1,35 +1,33 @@
 "use client";
 
 import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaReact,
-  FaNodeJs,
-  FaDocker,
-  FaJava,
-  FaPython,
   FaAws,
+  FaCss3,
+  FaDocker,
+  FaHtml5,
+  FaJava,
+  FaJs,
+  FaNodeJs,
+  FaPython,
+  FaReact,
 } from "react-icons/fa";
 
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { motion } from "framer-motion";
+import { DiPostgresql } from "react-icons/di";
 import {
-  SiMongodb,
+  SiDjango,
   SiExpress,
+  SiFirebase,
+  SiFlask,
   SiGooglecloud,
   SiMicrosoftazure,
-  SiTailwindcss,
+  SiMongodb,
   SiNextdotjs,
+  SiTailwindcss
 } from "react-icons/si";
-
 import { TbBrandCpp } from "react-icons/tb";
-
-import { DiPostgresql } from "react-icons/di";
-
-import { ScrollArea } from "@/components/ui/scroll-area";
-
-import { motion } from "framer-motion";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
 const about = {
   title: "About Me",
   description:
@@ -51,7 +49,7 @@ const about = {
       fieldName: "Nationality",
       fieldValue: "Indian",
     },
-    
+
     {
       fieldName: "Github Profile",
       fieldValue: "https://github.com/AnshumohanAcharya",
@@ -75,6 +73,28 @@ const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My Experience",
   items: [
+    {
+      id: 3,
+      position: "SDE Intern",
+      company: "NxtJob.ai",
+      duration: "August 2024 - September 2024",
+      description: [
+        "Contributed to the development of an ERP portal aimed at improving job search capabilities, increasing job matching accuracy by 35% and interview call rates by 50%.",
+        "Engineered intuitive resume-building features and integrated advanced search and filtering functionalities.",
+        "Boosted job search efficiency by 40% for over 200 users and enhancing overall user experience."
+      ],
+    },
+    {
+      id: 2,
+      position: "SDE Intern",
+      company: "Zenstreet.ai",
+      duration: "June 2024 - August 2024",
+      description: [
+        "Designed and developed a comprehensive Clinic Management platform that streamlined appointment booking for over 500 patients and enabled effective tracking of 1,000+ medical records.",
+        "Implemented real-time doctor availability and appointment scheduling features.",
+        "Optimized clinic workflows and enhancing patient engagement, resulting in a reduction in appointment scheduling time."
+      ],
+    },
     {
       id: 1,
       position: "Full Stack Developer Intern",
@@ -168,6 +188,22 @@ const skills = {
           name: "PostgreSQL",
           icon: <DiPostgresql />,
         },
+        {
+          name: "Firebase",
+          icon: <SiFirebase />,
+        },
+        {
+          name: "Django",
+          icon: <SiDjango />,
+        },
+        {
+          name: "Flask",
+          icon: <SiFlask />,
+        },
+        {
+          name: "Hono.js",
+
+        }
       ],
     },
     {
@@ -256,7 +292,7 @@ const Resume = () => {
                             </h4>
                             <p className="text-accent">{item.company}</p>
                             <p className="text-accent">{item.duration}</p>
-                            <ul className="text-white/60 list-disc list-inside">
+                            <ul className="list-disc list-inside text-white/60">
                               {item.description.map((desc, index) => (
                                 <li key={index}>{desc}</li>
                               ))}
@@ -286,7 +322,7 @@ const Resume = () => {
                             </h4>
                             <p className="text-accent">{item.school}</p>
                             <p className="text-accent">{item.duration}</p>
-                            <ul className="text-white/60 list-disc list-inside">
+                            <ul className="list-disc list-inside text-white/60">
                               {item.description.map((desc, index) => (
                                 <li key={index}>{desc}</li>
                               ))}
@@ -302,7 +338,7 @@ const Resume = () => {
             <TabsContent value="skills" className="w-full">
               <div className="flex flex-col gap-[30px]">
                 <div className="text-4xl font-bold">{skills.title}</div>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
                   {skills.items.map((category) => {
                     return (
                       <div
@@ -340,7 +376,7 @@ const Resume = () => {
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {about.description}
                 </p>
-                <ul className="text-white/60 list-disc list-inside text-left">
+                <ul className="text-left list-disc list-inside text-white/60">
                   {about.info.map((info) => (
                     <li key={info.fieldName}>
                       <span className="text-accent">{info.fieldName}: </span>

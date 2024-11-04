@@ -11,7 +11,8 @@ const services = [
     description: [
       "Skilled in frontend (HTML/CSS/JavaScript) and backend (Node.js/Express.js/MongoDB) technologies.",
       "Proficient in frameworks like React.js , Next.js",
-      "Experienced in cloud deployment (AWS/Azure/GCP) and database management."
+      "Experienced in cloud deployment (AWS/Azure/GCP) and database management.",
+      "Have worked on various types of architectures like monolithic, microservices, and serverless.",
     ],
     href: "/projects",
   },
@@ -23,6 +24,7 @@ const services = [
       "Expertise in automation (Docker/Kubernetes/Terraform) for infrastructure and deployment.",
       "Proficient in CI/CD setup (Jenkins/GitLab CI) and monitoring (Prometheus/Grafana).",
       "Skilled in cloud services management and security practices.",
+      "Experienced in setting up and maintaining production-grade systems.",
     ],
     href: "/projects",
   },
@@ -68,23 +70,23 @@ const Services = () => {
             return (
               <div
                 key={service.id}
-                className="flex-1 flex flex-col gap-6 justify-center group"
+                className="flex flex-col justify-center flex-1 gap-6 group"
               >
-                <div className="w-full flex justify-between items-center">
-                  <div className="text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500">
+                <div className="flex items-center justify-between w-full">
+                  <div className="text-5xl font-extrabold text-transparent transition-all duration-500 text-outline group-hover:text-outline-hover">
                     {service.num}
                   </div>
                   <Link
                     href={service.href}
                     className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45"
                   >
-                    <BsArrowDownRight className="text-primary text-3xl" />
+                    <BsArrowDownRight className="text-3xl text-primary" />
                   </Link>
                 </div>
                 <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500">
                   {service.title}
                 </h2>
-                <p className="text-white/60 dark:text-gray-300 mt-2">
+                <p className="mt-2 text-white/60 dark:text-gray-300">
                   {service.description.map((desc) => {
                     return (
                       <span key={desc.id} className="block">
@@ -93,11 +95,11 @@ const Services = () => {
                     );
                   })}
                 </p>
-                {/* <div className="border-b border-white/20 w-full">
+                {/* <div className="w-full border-b border-white/20">
                   <Image
                     src="public\next.svg"
                     alt={service.title}
-                    className="w-full h-full object-cover"
+                    className="object-cover w-full h-full"
                     width={500}
                     height={500}
                   />

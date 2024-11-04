@@ -9,10 +9,10 @@ import Stats from "../components/Stats";
 const Home = () => {
   return (
     <section className="h-full">
-      <div className="container mx-auto h-full">
-        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
+      <div className="container h-full mx-auto">
+        <div className="flex flex-col items-center justify-between xl:flex-row xl:pt-8 xl:pb-24">
           {/* Text */}
-          <div className="text-center xl:text-left order-2 xl:order-none">
+          <div className="order-2 text-center xl:text-left xl:order-none">
             <span className="text-xl">Software Developer</span>
             <h1 className="h1">
               Hello I'm <br />{" "}
@@ -23,12 +23,12 @@ const Home = () => {
               in various programming languages and technologies .
             </p>
             {/* Buttons and Socials */}
-            <div className="flex flex-col xl:flex-row items-center gap-8">
-              <a href="/Resume.pdf" download={"Resume.pdf"}>
+            <div className="flex flex-col items-center gap-8 xl:flex-row">
+              <a href="/Resume_SDE.pdf" download={"Resume_SDE.pdf"}>
                 <Button
                   variant="outline"
                   size="lg"
-                  className="uppercase flex items-center gap-2"
+                  className="flex items-center gap-2 uppercase"
                 >
                   <span>Download CV</span>
                   <FiDownload className="text-xl" />
@@ -43,7 +43,7 @@ const Home = () => {
             </div>
           </div>
           {/* Photo */}
-          <div className="order-1 xl:order-none mb-6 xl:mb-0">
+          <div className="order-1 mb-6 xl:order-none xl:mb-0">
             <Photo />
           </div>
         </div>
