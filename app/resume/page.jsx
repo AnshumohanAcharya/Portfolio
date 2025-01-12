@@ -9,7 +9,7 @@ import {
   FaJs,
   FaNodeJs,
   FaPython,
-  FaReact,
+  FaReact
 } from "react-icons/fa";
 
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -25,7 +25,7 @@ import {
   SiMicrosoftazure,
   SiMongodb,
   SiNextdotjs,
-  SiTailwindcss
+  SiTailwindcss,
 } from "react-icons/si";
 import { TbBrandCpp } from "react-icons/tb";
 const about = {
@@ -81,7 +81,7 @@ const experience = {
       description: [
         "Contributed to the development of an ERP portal aimed at improving job search capabilities, increasing job matching accuracy by 35% and interview call rates by 50%.",
         "Engineered intuitive resume-building features and integrated advanced search and filtering functionalities.",
-        "Boosted job search efficiency by 40% for over 200 users and enhancing overall user experience."
+        "Boosted job search efficiency by 40% for over 200 users and enhancing overall user experience.",
       ],
     },
     {
@@ -92,7 +92,7 @@ const experience = {
       description: [
         "Designed and developed a comprehensive Clinic Management platform that streamlined appointment booking for over 500 patients and enabled effective tracking of 1,000+ medical records.",
         "Implemented real-time doctor availability and appointment scheduling features.",
-        "Optimized clinic workflows and enhancing patient engagement, resulting in a reduction in appointment scheduling time."
+        "Optimized clinic workflows and enhancing patient engagement, resulting in a reduction in appointment scheduling time.",
       ],
     },
     {
@@ -118,7 +118,7 @@ const education = {
       degree: "BTech in Computer Science with Specialization in Cybersecurity",
       school: "Indian Institute of Information Technology Kottayam",
       duration: "2022 - 2026",
-      description: ["CGPA: 9.24/10"],
+      description: ["CGPA: 9.2/10"],
     },
     {
       id: 2,
@@ -152,6 +152,10 @@ const skills = {
           icon: <FaCss3 />,
         },
         {
+          name: "Tailwind CSS",
+          icon: <SiTailwindcss />,
+        },
+        {
           name: "JavaScript",
           icon: <FaJs />,
         },
@@ -162,10 +166,6 @@ const skills = {
         {
           name: "Next.js",
           icon: <SiNextdotjs />,
-        },
-        {
-          name: "Tailwind CSS",
-          icon: <SiTailwindcss />,
         },
       ],
     },
@@ -202,8 +202,7 @@ const skills = {
         },
         {
           name: "Hono.js",
-
-        }
+        },
       ],
     },
     {
@@ -294,7 +293,7 @@ const Resume = () => {
                             <p className="text-accent">{item.duration}</p>
                             <ul className="list-disc list-inside text-white/60">
                               {item.description.map((desc, index) => (
-                                <li key={index}>{desc}</li>
+                                <li key={item.id}>{desc}</li>
                               ))}
                             </ul>
                           </li>
@@ -324,7 +323,7 @@ const Resume = () => {
                             <p className="text-accent">{item.duration}</p>
                             <ul className="list-disc list-inside text-white/60">
                               {item.description.map((desc, index) => (
-                                <li key={index}>{desc}</li>
+                                <li key={item.id}>{desc}</li>
                               ))}
                             </ul>
                           </li>
